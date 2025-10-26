@@ -1,2 +1,8 @@
-# verificador-de-conexi-n-a-p-ginas-web
-mantiene una conexión con una página web cada x intérvalo, avisando si en algún momento perdió la conexión
+pasos para usar el verificador:
+
+1: npm install -g ts-node
+2: npm install --save-dev @types/node
+3: ts-node verificador
+
+
+IMPORTANTE: para salir una vez el establezca la conexión, usa ctrl + c
