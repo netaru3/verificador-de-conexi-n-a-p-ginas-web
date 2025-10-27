@@ -1,7 +1,9 @@
 pasos para usar el verificador:
 
 1: npm install -g ts-node
+
 2: npm install --save-dev @types/node
+
 3: ts-node verificador
 
 
