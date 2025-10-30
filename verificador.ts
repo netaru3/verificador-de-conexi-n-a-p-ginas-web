@@ -17,7 +17,7 @@ async function verificador(url:string) {
   if(isNaN(Number(tiempo))){console.log("ingrese un número");
     rl.close(); return false
   };rl.question("escriba salir o ingrese la url en formato https://www.example.com:",
-   function(eso: string){if(eso.includes("http://")=== false && eso.includes(".com")===false)
+   function(eso: string){if(eso.includes("http://") || eso.includes("https://")=== false)
     {
     console.log("ingrese una url válida"), rl.close(); return true
    };
