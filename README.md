@@ -5,9 +5,9 @@ Me da pereza explicarlo en profundidad, pero básicamente, cuando se logra hacer
 
 pasos para arrancar el proyecto:
 
-1: npm install -g ts-node
+1: npm install -g ts-node yargs
 
-2: npm install --save-dev @types/node
+2: npm install --save-dev @types/node --save-dev @types/yargs
 
 3: ts-node verificador
 
