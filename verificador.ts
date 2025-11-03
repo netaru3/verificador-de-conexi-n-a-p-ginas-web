@@ -4,14 +4,21 @@ import readline from 'readline/promises'
 import {enviargmail} from './enviargmail.ts'
 import {codigo} from './enviargmail.ts'
 import {gmail} from './enviargmail.ts';
+import yarg from 'yargs'
+import { hideBin } from 'yargs/helpers';
 
+let arg= yarg(hideBin(process.argv)).option("url",{alias:"u",
+  type: "string",
+  demandOption: true,
+  description: "la url",
+  default: "https://www.google.com"
+}).parse();
+let url= arg.url
 let rl= readline.createInterface(
     {input: process.stdin,
     output: process.stdout
     }
  )
-console.log(codigo)
-console.log(gmail)
 let tiempo:number |string | undefined= await  rl.question("escriba salir o ingrese el tiempo del intervalo en ms:")
 rl.close();
 console.log("hola")
@@ -31,4 +38,4 @@ async function verificador(url:string) {
  ;
  }
 
- verificador("https://www.google.com")
+ verificador(url)
