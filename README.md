@@ -1,4 +1,4 @@
-pasos para usar el verificador:
+pasos para arrancar el proyecto:
 
 1: npm install -g ts-node
 
