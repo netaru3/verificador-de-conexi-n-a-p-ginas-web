@@ -6,8 +6,13 @@ para iniciarlo tienes que hacer node start, y para pararlo tienes que hacer node
 
 para que funcione, tienen que además de descargarse todos los archivos,configurar el ecosystem.config.cjs
 
-por ejemplo: module.exports = {
-  apps: [
+por ejemplo: 
+
+module.exports = {
+  
+  apps:
+  
+[
     {
       name: 'verificador',
       
