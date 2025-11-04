@@ -1,19 +1,7 @@
-Este proyecto usa un sistema de envío de gmails y de logs.
-cuando se logra hacer una conexión a una página web, se crea un archivo "logs/low" donde escribe todas las veces en que la conexión ha sido exitosa, cuando la conexión se pierde, envía un gmail al usuario que especifiques en el .env.
+Este es el proyecto más grande que he hecho hasta la fecha xD.
 
-es un remake de un repositorio que hice, donde automatizaba el ping de nmap a google.com.
+Lo que hace este código es sencillo: mantiene la conexión con un sitio web y te avisa por gmail cuando pierdes esas conexión (ideal si quieres estar alerta de las caídas de tu server), cuenta con un sistema de logs que se guardan en el archivo logs/low/texto.txt
 
-Si tienes una página y quieres ser el primero en ser notificado cuando se cae su conexión, este código te podría ayudar
+para iniciarlo tienes que hacer node start, y para pararlo tienes que hacer node stop.
 
-
-
-pasos para arrancar el proyecto:
-
-1: npm install -g ts-node yargs
-
-2: npm install --save-dev @types/node --save-dev @types/yargs
-
-3: ts-node verificador --url="la_url"
-
-
-IMPORTANTE: para salir una vez se establezca la conexión, usa ctrl + c
+IMPORTANTE: Aunque cierres la aplicación, se seguirá ejecutando en segundo plano, sí o sí tienes que hacer node stop o finalizar el proceso en el administrador de tareas si quieres dejar de usarlo.
