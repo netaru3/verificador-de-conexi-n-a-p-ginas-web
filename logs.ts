@@ -1,9 +1,10 @@
 import fs from 'fs';
+import path from 'path'
 export class logs{
     constructor(){};
-    private static readonly lowpath='logs/low';
-    private static readonly midpath='logs/mid';
-    private static readonly highpath='logs/high';
+     static lowpath=path.resolve('logs/low');
+     static  midpath='logs/mid';
+     static  highpath='logs/high';
 
      static crearpath(){
         if(!fs.existsSync(this.lowpath)){
@@ -19,7 +20,7 @@ export class logs{
             fs.writeFileSync(`${this.lowpath}/texto.txt`,"")
         }
      };
-    static savelogs(data:string, level:string){
+    static savelogs(data, level){
        if(level==="low"){fs.appendFileSync(`${this.lowpath}/texto.txt`,`${data}:
         Date ${new Date()}\n`)};
        if(level==="mid"){fs.appendFileSync(`${this.midpath}/texto.txt`,`${data}:
