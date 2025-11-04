@@ -38,6 +38,7 @@ try {
   const info = await transporter.sendMail(mailOptions);
   console.log('Correo enviado:', info.response);
 } catch (error) {let id=setTimeout(async() => {const info2 = await transporter.sendMail(mailOptions2);
-if(info2.accepted.length>0){clearInterval(id)}}, 5000);
+if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
+
