@@ -12,8 +12,14 @@ module.exports = {
   
   apps:
   
+
+
+
 [
+   [
+   
     {
+      
       name: 'verificador',
       
       script: './verificador_automatico.js',
