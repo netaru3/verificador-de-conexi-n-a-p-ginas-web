@@ -8,13 +8,15 @@ para que funcione, tienen que además de descargarse todos los archivos,configur
 
 por ejemplo: 
 
-module.exports = {
-  
-  apps:
-  
 
 
 
+
+
+
+
+module.exports = 
+{ apps:
 [
    [
    
