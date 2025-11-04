@@ -6,10 +6,12 @@ module.exports = {
       interpreter: 'node',
       env: {
         NODE_ENV: 'production',
-        GMAIL_USER: 'netaru3@gmail.com',
-        GMAIL_PASS: 'vhwa ibyy zoyr nwuo',
-        GMAIL_DESTI: "netaru3@gmail.com"
+        url:"https://www.google.com",
+        GMAIL_USER: 'tu_gmail',
+        GMAIL_PASS: 'tu_contraseña_de_aplicacion',
+        GMAIL_DESTI: "gmail_del_destinatario"
       }
     }
   ]
+
 };
