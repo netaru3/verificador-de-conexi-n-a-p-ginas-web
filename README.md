@@ -4,7 +4,7 @@ Lo que hace este código es sencillo: mantiene la conexión con un sitio web y t
 
 para iniciarlo tienes que hacer node start, y para pararlo tienes que hacer node stop.
 
-para que funcione, tienen que además de descargarse todos los archivos, deben de configurar el ecosystem.config.cjs
+para que funcione, tienen que además de descargarse todos los archivos,configurar el ecosystem.config.cjs
 
 por ejemplo: module.exports = {
   apps: [
