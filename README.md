@@ -46,4 +46,6 @@ module.exports =
 
 otra cosa importante, es que para conseguir una contraseña de aplicación, tienen que tener la doble autentificación de google activa, y pedirla entrando a este link: https://myaccount.google.com/apppasswords?rapt=AEjHL4MgWZ9ZPlMbCNPmv4bg2Uk4KUYcHCjUL3Y55H52cLs40NjtcMpOA4nrX43Pd96vhQy9nRRKHKEuV5OnWlulaTjEY_hszn7xvdJHdhZ0juHgdC3N2qY
 
+Si quieren ver si el archivo está siendo ejecutado en segundo plano, tienen el comando pm2 list, si les saltó un error, escriban pm2 logs y verán cual es el error, por mi parte, estuve 2 horas configurándolo en una pc que no es la mía para que funcione, pero puede que se me haya escapado algo, si tienen un error no duden en contactarme (o pueden tan solo preguntarle a chatgpt xD)
+
 IMPORTANTE: Aunque cierres la aplicación, se seguirá ejecutando en segundo plano, sí o sí tienes que hacer node stop o finalizar el proceso en el administrador de tareas si quieres dejar de usarlo.
