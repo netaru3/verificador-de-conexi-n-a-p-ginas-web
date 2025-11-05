@@ -1,5 +1,3 @@
-import 'dotenv/config'
-import env from 'env-var'
 import ecosystem from './ecosystem.config.cjs'
 import { execSync } from 'child_process'
 function instalar(paquete){try{require.resolve(paquete)} catch{
@@ -45,5 +43,6 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
+
 
 
