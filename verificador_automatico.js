@@ -2,8 +2,7 @@ import {logs} from './logs.js'
 import readline from 'readline/promises'
 import {enviargmail} from './enviargmail.js'
 import {codigo} from './enviargmail.js'
-import {gmail} from './enviargmail.js';
-import fetch from 'node-fetch';
+import {gmail} from './enviargmail.js';;
 let tiempo= 30000
 console.log("hola")
 async function verificador(url) {
@@ -25,4 +24,5 @@ let url= "https://www.google.com"
  verificador(url)
 
  console.log(url)
+
 
