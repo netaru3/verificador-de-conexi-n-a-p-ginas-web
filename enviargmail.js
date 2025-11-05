@@ -1,6 +1,10 @@
 import 'dotenv/config'
 import env from 'env-var'
 import ecosystem from './ecosystem.config.cjs'
+import { execSync } from 'child_process'
+function instalar(paquete){try{require.resolve(paquete)} catch{
+execSync(`npm install ${paquete}`)
+}};
 import nodemailer from 'nodemailer';
 export let codigo=process.env.GMAIL_PASS
 export let gmail= process.env.GMAIL_USER;
@@ -41,4 +45,5 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
+
 
