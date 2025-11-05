@@ -1,5 +1,4 @@
-import { isExternalModuleReference } from 'typescript';
-import {logs} from '../infraestructura/logs.js'
+import {logs} from './logs.js'
 import readline from 'readline/promises'
 import {enviargmail} from './enviargmail.js'
 import {codigo} from './enviargmail.js'
@@ -26,3 +25,4 @@ let url= "https://www.google.com"
  verificador(url)
 
  console.log(url)
+
