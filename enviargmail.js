@@ -1,5 +1,4 @@
-import 'dotenv/config'
-import env from 'env-var'
+instalar("nodemailer")
 import ecosystem from './ecosystem.config.cjs'
 import nodemailer from 'nodemailer';
 import { execSync } from 'child_process'
@@ -50,3 +49,4 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
+
