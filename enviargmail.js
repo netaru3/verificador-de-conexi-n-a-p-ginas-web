@@ -1,9 +1,11 @@
+import 'dotenv/config'
+import env from 'env-var'
 import ecosystem from './ecosystem.config.cjs'
+import nodemailer from 'nodemailer';
 import { execSync } from 'child_process'
 function instalar(paquete){try{require.resolve(paquete)} catch{
 execSync(`npm install ${paquete}`)
 }};
-import nodemailer from 'nodemailer';
 export let codigo=process.env.GMAIL_PASS
 export let gmail= process.env.GMAIL_USER;
 export let gmaildestinatario= process.env.GMAIL_DESTI;
@@ -27,13 +29,18 @@ const mailOptions = {
   from:gmail, 
   to:gmaildestinatario,
   subject: "error con el fetch",
-  text:"hubo un fallo intentando conectar con tu servidor"
+  text:"hubo un fallo intentando conectar con tu servidor",
+  filename:"texto.txt",
+ attachments: [{filename:"texto.txt",
+  path: "./logs/low/texto.txt"}]
   
 };
 const mailOptions2={from:gmail,
   to:gmaildestinatario,
   subject:"se desconectó el internet",
-  text:"probablemente se le desconectó el internet"
+  text:"probablemente se le desconectó el internet",
+  attachments: [{filename:"texto.txt",
+  path: "./logs/low/texto.txt"}]
 }
 let info;
 try {
@@ -43,6 +50,3 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
-
-
-
