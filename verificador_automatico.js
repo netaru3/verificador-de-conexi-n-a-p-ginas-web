@@ -11,11 +11,11 @@ async function verificador(url) {
   try{let res=await fetch(url);
     if(!res.ok){;enviargmail(`hubo un error en la conexión con la url
       ${url}`, true,codigo,gmail,gmail,"error de conexión"
-    );console.log("errorde conexión")
+    );logs.savelogs("errorde conexión con la url")
     ; return false
  }; logs.crearpath();
  logs.savelogs("la conexión es estable","low");return true
-}catch(error){console.log("error");enviargmail("hubo un error en:"+url+error,
+}catch(error){logs.savelogs("error de conexion");enviargmail("hubo un error en:"+url+error,
   true,codigo,gmail,gmail,"error en el servidor");return false}
  }, tiempo);
  ;
@@ -24,5 +24,6 @@ let url= "https://www.google.com"
  verificador(url)
 
  console.log(url)
+
 
 
