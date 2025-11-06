@@ -31,15 +31,19 @@ const mailOptions = {
   text:"hubo un fallo intentando conectar con tu servidor",
   filename:"texto.txt",
  attachments: [{filename:"texto.txt",
-  path: "./logs/low/texto.txt"}]
+  path: "./logs/low/texto.txt"},
+{filename:"texto.txt",
+  path: "./logs/high/texto.txt"}]
   
 };
 const mailOptions2={from:gmail,
   to:gmaildestinatario,
   subject:"se desconectó el internet",
   text:"probablemente se le desconectó el internet",
-  attachments: [{filename:"texto.txt",
-  path: "./logs/low/texto.txt"}]
+   attachments: [{filename:"texto.txt",
+  path: "./logs/low/texto.txt"},
+{filename:"texto.txt",
+  path: "./logs/high/texto.txt"}]
 }
 let info;
 try {
@@ -49,4 +53,3 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
-
