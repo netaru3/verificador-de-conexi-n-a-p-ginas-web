@@ -4,7 +4,7 @@ export class logs{
     constructor(){};
      static lowpath=path.resolve('logs/low');
      static  midpath='logs/mid';
-     static  highpath='logs/high';
+     static  highpath=path.resolve('logs/high');
 
      static crearpath(){
         if(!fs.existsSync(this.lowpath)){
@@ -29,3 +29,4 @@ export class logs{
          Date ${new Date()}\n`)}
      }
 }
+
