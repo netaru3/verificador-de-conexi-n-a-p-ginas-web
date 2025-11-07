@@ -1,6 +1,6 @@
 instalar("nodemailer")
 import ecosystem from './ecosystem.config.cjs'
-import nodemailer from 'nodemailer';
+let  nodemailer= await import('nodemailer');
 import { execSync } from 'child_process'
 function instalar(paquete){try{require.resolve(paquete)} catch{
 execSync(`npm install ${paquete}`)
@@ -53,3 +53,4 @@ try {
 if(info2.accepted.length>0){clearInterval(id)}}, 31000);
   console.error('Error al enviar el correo:', error);
 }}
+
