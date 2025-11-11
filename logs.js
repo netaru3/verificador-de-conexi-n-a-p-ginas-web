@@ -9,24 +9,24 @@ export class logs{
      static crearpath(){
         if(!fs.existsSync(this.lowpath)){
             fs.mkdirSync(this.lowpath, {recursive: true}
-            );fs.writeFileSync(`${this.lowpath}/texto.txt`,"")
+            );fs.writeFileSync(`${this.lowpath}/conexiones-exitosas.txt`,"")
         };
         if(!fs.existsSync(this.midpath)){
             fs.mkdirSync(this.midpath);
-             fs.writeFileSync(`${this.lowpath}/texto.txt`,"")
+             fs.writeFileSync(`${this.midpath}/texto.txt`,"")
         }
         if(!fs.existsSync(this.highpath)){
             fs.mkdirSync(this.highpath);
-            fs.writeFileSync(`${this.lowpath}/texto.txt`,"")
+            fs.writeFileSync(`${this.highpath}/conexiones-fallidas.txt`,"")
         }
      };
     static savelogs(data, level){
-       if(level==="low"){fs.appendFileSync(`${this.lowpath}/texto.txt`,`${data}:
+       if(level==="low"){fs.appendFileSync(`${this.lowpath}/conexiones-exitosas.txt`,`${data}:
         Date ${new Date()}\n`)};
        if(level==="mid"){fs.appendFileSync(`${this.midpath}/texto.txt`,`${data}:
          Date ${new Date()}\n`)};
-       if(level==="high"){fs.appendFileSync(`${this.highpath}/texto.txt`,`${data}:
+       if(level==="high"){fs.appendFileSync(`${this.highpath}/conexiones-fallidas.txt`,`${data}:
          Date ${new Date()}\n`)}
      }
+     static deletepath(){fs.rmSync(this.lowpath, {recursive:true})}
 }
-
