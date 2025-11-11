@@ -1,0 +1,32 @@
+{
+  "name": "verificador-automatico-terminal",
+  "version": "1.0.9",
+  "description": "Un verificador automático de correos con Node.js y PM2",
+  "main": "start.js",
+  "bin": {
+    "verificador": "./start.js",
+    "stop": "./stop.js",
+    "verificar-siempre": "./start-siempre.js",
+    "verificar-siempre-linux": "./start-siempre-linux.js"
+  },
+  "scripts": {
+    "start": "node start.js",
+    "start-forever": "node start-siempre.js",
+    "start-forever-linux": "node start-siempre-linux.js",
+    "stop":"node stop.js",
+    "estado":"pm2 list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netaru3/verificador-de-conexi-n-a-p-ginas-web"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0",
+    "imapflow": "^1.0.0",
+    "mailparser": "^3.8.0",
+    "env-var": "^7.4.0",
+    "dotenv": "^16.4.0"
+  },
+  "author": "netaru3",
+  "license": "MIT"
+}
